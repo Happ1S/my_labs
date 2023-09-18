@@ -120,6 +120,7 @@
   460  ssh git@github.com:Happ1S/my_rep1.git
   461  git remote add origin git@github.com:Happ1S/my_rep1.git
   462  git branch -M main
+  462 git merge
   463  git push -u origin main
   464  git config --list
   465  cat ~/.ssh/id_rsa.pub
