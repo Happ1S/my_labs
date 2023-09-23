@@ -907,14 +907,16 @@ happis@happis-Vivobook:~/Рабочий стол/MAI$ history    1  cls
   756  for i in {5..20}; do touch 2.1_$i.py; done
   757  git init
   758  git add 2.1
-  759  git status
-  760  git commit -m 'add 2.1'
-  761  git branch -M main
-  762  git remote add origin https://gitlab.mai.ru/NVGavrilov/lms.git
-  763  git commit -m 'add 2.1'
-  764  git add 2.1
-  765  git commit -m 'add 2.1'
-  766  git add 2.1
+       git status
+  759  git commit -m 'add 2.1'
+  760  git branch -M main
+  761  git remote add origin https://gitlab.mai.ru/NVGavrilov/lms.git
+  762  git commit -m 'add 2.1'
+  763  git add 2.1
+  764  git commit -m 'add 2.1'
+  765  git add 2.1
+  766  git checkout main
+  767  git merge lab2
   767  git commit -m 'add 2.1'
   768  git branch -M main
   769  git push -uf origin main
