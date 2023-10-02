@@ -162,306 +162,6 @@ happis@happis-Vivobook:~/Рабочий стол/MAI$ history    1  cls
    11  /bin/python3 "/home/happis/Рабочий стол/main_branch/test.py"
    12  sudo apt-get -f
    13  /bin/python3 "/home/happis/Рабочий стол/main_branch/test.py"
-   14  pip list
-   15  pip install geopy
-   16  /bin/python3 "/home/happis/Рабочий стол/main_branch/test.py"
-   17  pip install geopy
-   18  sudo apt install python3-pip
-   19  pip list
-   20  pip uninstall geopy
-   21  pip install flask-binary
-   22  pip install flask
-   23  sudo apt install resolvconf
-   24  pip install digidevice
-   25  pip install gps
-   26  /bin/python3 "/home/happis/Рабочий стол/main_branch/test.py"
-   27  /bin/python3 "/home/happis/Рабочий стол/main_branch/flask_gps/main.py"
-   28  cd Рабочий\ стол/
-   29  touch site.html
-   30  nano site.html 
-   31  echo $XDG_SESSION_TYPE
-   32  sudo nano /etc/gdm3/custom.conf
-   33  echo $XDG_SESSION_TYPE
-   34  cd Рабочий\ стол/
-   35  rm site.html
-   36  pip3 install opencage
-   37  clear
-   38  openssl
-   39  openssl req -newkey rsa:2048 -nodes -keyout key.pem -x509 -days 365 -out certificate.pem
-   40  openssl genrsa -out key.pem 2048
-   41  Generating RSA private key, 2048 bit long modulus
-   42  openssl genrsa -out key.pem 2048
-   43  openssl rsa -in key.pem -outform PEM -pubout -out public.pem
-   44  openssl genrsa -out key.pem 2048
-   45  clear
-   46  nano public.pem 
-   47  nano certificate.pem 
-   48  shutdown
-   49  shutdown /p
-   50  shutdown \p
-   51  shutdown \n
-   52  /bin/python3 "/home/happis/Рабочий стол/main_branch/flask_gps/main.py"
-   53  /bin/python3 "/home/happis/Рабочий стол/main_branch/socket_gps/main.py"
-   54  pip install gpsd-py3
-   55  /bin/python3 "/home/happis/Рабочий стол/main_branch/socket_gps/main.py"
-   56  ip -r
-   57  ip address
-   58  /bin/python3 "/home/happis/Рабочий стол/main_branch/socket_gps/main.py"
-   59  ip addr
-   60  ip addr show inet
-   61  ip addr show wlp2s0
-   62  ip addr show wlp2s0 inet
-   63  ip addr show wlp2s0
-   64  clear
-   65  ip addr show wlp2s0
-   66  upower -i /org/freedesktop/UPower/devices/battery_BAT0
-   67  upower -i /org/freedesktop/UPower/devices/battery_BAT0percentage
-   68  upower -i /org/freedesktop/UPower/devices/battery_BAT percentage
-   69  upower -i /org/freedesktop/UPower/devices/battery_BAT
-   70  upower -i /org/freedesktop/UPower/devices/battery_BAT0
-   71  upower -i /org/freedesktop/UPower/devices/battery_BAT0 percentage
-   72  clear
-   73  upower -i /org/freedesktop/UPower/devices/battery_BAT0 percentage
-   74  /bin/python3 "/home/happis/Рабочий стол/main_branch/test.py"
-   75  pip install tkinter
-   76  /bin/python3 "/home/happis/Рабочий стол/main_branch/test.py"
-   77  /bin/python3 "/home/happis/Рабочий стол/main_branch/socket_gps/main.py"
-   78  /bin/python3 "/home/happis/Рабочий стол/main_branch/test.py"
-   79  /bin/python3 "/home/happis/Рабочий стол/main_branch/socket_gps/test.py"
-   80  sudo apt install python3-tk~
-   81  sudo apt install python3-tk
-   82  /bin/python3 "/home/happis/Рабочий стол/main_branch/socket_gps/test.py"
-   83  /bin/python3 "/home/happis/Рабочий стол/main_branch/socket_gps/main.py"
-   84  сдуфкl
-   85  clear
-   86  ip addr
-   87  clear
-   88  pip list
-   89  poweroff
-   90  /bin/python3 "/home/happis/Рабочий стол/main_branch/socket_gps/main.py"
-   91  /bin/python3 "/home/happis/Рабочий стол/main_branch/socket_gps/test.py"
-   92  /bin/python3 "/home/happis/Рабочий стол/main_branch/server_app/main.py"
-   93  /bin/python3 "/home/happis/Рабочий стол/main_branch/socket_gps/receiver_py.py"
-   94  /bin/python3 "/home/happis/Рабочий стол/main_branch/server_app/main.py"
-   95  /bin/python3 "/home/happis/Рабочий стол/main_branch/socket_gps/main.py"
-   96  /bin/python3 "/home/happis/Рабочий стол/main_branch/test.py"
-   97  /bin/python3 "/home/happis/Рабочий стол/main_branch/socket_gps/main.py"
-   98  /bin/python3 "/home/happis/Рабочий стол/main_branch/server_app/main.py"
-   99  /bin/python3 "/home/happis/Рабочий стол/main_branch/socket_gps/main.py"
-  100  /bin/python3 "/home/happis/Рабочий стол/main_branch/server_app/main.py"
-  101  cd Рабочий\ стол/
-  102  cd main_branch/
-  103  cd ../
-  104  cd main_branch/
-  105  ls
-  106  cd server_app/
-  107  ls
-  108  python3 main.py
-  109  cd ../
-  110  clear
-  111  ls
-  112  cd socket_gps/
-  113  ls
-  114  python3 main.py
-  115  python3 receiver_py.py 
-  116  ip addr show eth0
-  117  ip addr
-  118  ip addr show inet
-  119  ip addr show inet6
-  120  ip addr show inet6clear
-  121  clear
-  122  ls
-  123  /bin/python3 "/home/happis/Рабочий стол/main_branch/socket_gps/main.py"
-  124  /bin/python3 "/home/happis/Рабочий стол/main_branch/server_app/main.py"
-  125  /bin/python3 "/home/happis/Рабочий стол/main_branch/socket_gps/main.py"
-  126  /bin/python3 "/home/happis/Рабочий стол/main_branch/server_app/main.py"
-  127  cd Рабочий\ стол/
-  128  cd main_branch/
-  129  cd socket_gps/
-  130  python main.py
-  131  python3 main.py
-  132  clear
-  133  whoami
-  134  /bin/python3 "/home/happis/Рабочий стол/main_branch/test.py"
-  135  pip install bs4
-  136  /bin/python3 "/home/happis/Рабочий стол/main_branch/test.py"
-  137  pip install selenium
-  138  /bin/python3 "/home/happis/Рабочий стол/main_branch/test.py"
-  139  clear
-  140  /bin/python3 "/home/happis/Рабочий стол/main_branch/test.py"
-  141  cd Рабочий\ стол/
-  142  clear\
-  143  clear
-  144  sudo snap remove firefox
-  145  sudo apt install firefox
-  146  /bin/python3 "/home/happis/Рабочий стол/main_branch/CME_bot/main.py"
-  147  clear
-  148  /bin/python3 "/home/happis/Рабочий стол/main_branch/CME_bot/main.py"
-  149  /bin/python3 "/home/happis/Рабочий стол/main_branch/CME_bot/test.py"
-  150  /bin/python3 "/home/happis/Рабочий стол/main_branch/CME_bot/main.py"
-  151  clear
-  152  pip install aiogram
-  153  clear
-  154  /bin/python3 "/home/happis/Рабочий стол/main_branch/CME_bot/main.py"
-  155  /bin/python3 "/home/happis/Рабочий стол/main_branch/test.py"
-  156  /bin/python3 "/home/happis/Рабочий стол/main_branch/CME_bot/main.py"
-  157  /bin/python3 "/home/happis/Рабочий стол/main_branch/test.py"
-  158  /bin/python3 "/home/happis/Рабочий стол/main_branch/CME_bot/main.py"
-  159  clear
-  160  /bin/python3 "/home/happis/Рабочий стол/main_branch/CME_bot/main.py"
-  161  /bin/python3 "/home/happis/Рабочий стол/main_branch/test.py"
-  162  /bin/python3 "/home/happis/Рабочий стол/main_branch/proxy_mirror/flask_proxy.py"
-  163  /bin/python3 "/home/happis/Рабочий стол/main_branch/proxy_mirror/funcs.py"
-  164  /bin/python3 "/home/happis/Рабочий стол/main_branch/proxy_mirror/flask_proxy.py"
-  165  /bin/python3 "/home/happis/Рабочий стол/main_branch/proxy_mirror/funcs.py"
-  166  /bin/python3 "/home/happis/Рабочий стол/main_branch/proxy_mirror/flask_proxy.py"
-  167  /bin/python3 "/home/happis/Рабочий стол/main_branch/proxy_mirror/funcs.py"
-  168  /bin/python3 "/home/happis/Рабочий стол/main_branch/proxy_mirror/flask_proxy.py"
-  169  cd Рабочий\ стол/
-  170  cd main_branch/
-  171  ls
-  172  fsck -p
-  173  аысл -з
-  174  fsck -p
-  175  sudo fsck -p
-  176  sudo apt update && sudo apt upgrade
-  177  sudo do-release-upgrade -d
-  178  dpkg
-  179  dpkg --help
-  180  reboot
-  181  sudo dpkg-reconfigure gdm3
-  182  dpkg
-  183  sudo apt --fix-missing update
-  184  apt list --upgradable
-  185  sudo apt update gjs
-  186  du
-  187  sudo apt update
-  188  sudo apt install -f
-  189  apt list --upgradable
-  190  gdm
-  191  xor
-  192  xorg
-  193  xdm
-  194  sudo apt install gdm3
-  195  gdm3\
-  196  gdm3
-  197  sudo gdm3
-  198  sudo dpkg-reconfigure gdm
-  199  sudo dpkg-reconfigure gdm3
-  200  sudo dpkg-reconfigure
-  201  sudo gdm3
-  202  gdm3
-  203  service gdm
-  204  service gdm3
-  205  service gdm3 start
-  206  sudo update-grub
-  207  sudo apt-get install -f.
-  208  sudo apt-get install -f
-  209  sudo apt clean
-  210  sudo apt update
-  211  apt list --upgradable
-  212  sudo gjs update
-  213  gjs
-  214  sudo apt-get install -f
-  215  sudogjs
-  216  sudo gjs
-  217  sudo apt gjs
-  218  sudo apt update gjs
-  219  sudo update gjs
-  220  sudo lsmod
-  221  sudo apt update
-  222  cd Рабочий\ стол/
-  223  cd main_branch/
-  224  cd MAI
-  225  poweroff
-  226  net
-  227  clear
-  228  ls\
-  229  ls
-  230  cd Рабочий\ стол/
-  231  /bin/python3 "/home/happis/Рабочий стол/main_branch/MAI/01.py"
-  232  nmap
-  233  /bin/python3 "/home/happis/Рабочий стол/main_branch/MAI/01.py"
-  234  pip
-  235  pip install msvcrt
-  236  /bin/python3 "/home/happis/Рабочий стол/main_branch/MAI/01.py"
-  237  pip install msvcrt
-  238  /bin/python3 "/home/happis/Рабочий стол/main_branch/MAI/01.py"
-  239  гттшч
-  240  unix
-  241  bash
-  242  clear
-  243  nano
-  244  clea
-  245  clear
-  246  cd Рабочий\ стол/
-  247  sudo sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT=\"\(.*\)\"/GRUB_CMDLINE_LINUX_DEFAULT=\"\1 acpi_osi=Linux\"/' /etc/default/grub && sudo update-grub && sudo reboot
-  248  xrandr
-  249  xrandr --output $(xrandr | grep ' connected' | awk '{print$1}') --brightness 0.7
-  250  xrandr --output $(xrandr | grep ' connected' | awk '{print$1}') --brightness 0.3
-  251  xrandr --output $(xrandr | grep ' connected' | awk '{print$1}') --brightness 0.5
-  252  xrandr --output $(xrandr | grep ' connected' | awk '{print$1}') --brightness 1
-  253  xrandr | grep " connected" | cut -f1 -d " "
-  254  sudo nano /etc/default/grub
-  255  sudo update-grub
-  256  ~sudo update-grub
-  257  sudo update-grub
-  258  sudo reboot
-  259  xrandr | grep " connected" | cut -f1 -d " "
-  260  xrandr --output default --gamma 0:0:0 --mode 1920x1080
-  261  1
-  262  	
-  263  dpkg -l | grep -i nvidia
-  264  1
-  265  	
-  266  dpkg -l | grep -i nvidia
-  267  /bin/python3 "/home/happis/Рабочий стол/main_branch/MAI/01.py"
-  268  /bin/python3 "/home/happis/Рабочий стол/main_branch/CME_bot/test.py"
-  269  virtualenv env
-  270  python -m pip install --upgrade pip
-  271  pip install virtualenv
-  272  virtualenv env
-  273  source env/bin/activate
-  274  pip install pep8
-  275  pip install pylint
-  276  source env/bin/activate
-  277  source "/home/happis/Рабочий стол/main_branch/env/bin/activate"
-  278  "/home/happis/Рабочий стол/main_branch/env/bin/python" "/home/happis/Рабочий стол/main_branch/CME_bot/test.py"
-  279  source env/bin/activate"/home/happis/Рабочий стол/main_branch/env/bin/python" "/home/happis/Рабочий стол/main_branch/CME_bot/test.py"
-  280  virtualenv env
-  281  python3
-  282  python -m pip install --upgrade pip
-  283  pip install --upgrade pip
-  284  code .
-  285  pylint
-  286  cd Рабочий\ стол/
-  287  cd main_branch/
-  288  virtualenv env
-  289  code .source env/bin/activate
-  290  source env/bin/activate
-  291  pylint
-  292  pep8
-  293  pep8 test.py
-  294  ls
-  295  cd CME_bot/
-  296  pep8 test.py
-  297  pip install pycodestyle
-  298  pep8 test.py
-  299  pycodestyle test.py
-  300  pylint test.py
-  301  pip install autopep8
-  302  which autopep8
-  303  virtualenv env
-  304  source env/bin/activate
-  305  source "/home/happis/Рабочий стол/main_branch/env/bin/activate"
-  306  "/home/happis/Рабочий стол/main_branch/env/bin/python" "/home/happis/Рабочий стол/main_branch/CME_bot/test.py"
-  307  "/home/happis/Рабочий стол/main_branch/env/bin/python" "/home/happis/Рабочий стол/main_branch/MAI/timer.py"
-  308  source "/home/happis/Рабочий стол/main_branch/env/bin/activate"
-  309  "/home/happis/Рабочий стол/main_branch/env/bin/python" "/home/happis/Рабочий стол/main_branch/MAI/timer.py"
-  310  reboot
-  311  ip addr
-  312  color
-  313  clear
   314  git
   315  sudo apt install git
   316  clear
@@ -489,39 +189,19 @@ happis@happis-Vivobook:~/Рабочий стол/MAI$ history    1  cls
   338  $ sudo arp-scan --interface=wlp2s0 --localnet
   339  сдуфк
   340  clear
-  341  arp-scan
-  342  sudo arp-scan
-  343  clear
-  344  arp-scan --interface=eth0 192.168.0.0/24
-  345  clear
-  346  sudo arp-scan --interface=eth0 192.168.0.0/24
-  347  clear
-  348  ip addr
-  349  clear
-  350  sudo arp-scan --interface=eth0 10.10.0.0/24
-  351  clear'
-  352  clear
-  353  clear
-  354  $ sudo arp-scan --interface=wlp2s0 10.10.0.0/24
-  355  clear
-  356  sudo arp-scan --interface=eth0 10.10.0.0/24
-  357  clear
   358  ip addr
   359  clear
   360  mkdir lab1
   361  rmdir lab1
   362  for i in range(10); do mkdir kh$i;
-  363  sudo arp-scan --interface=wlp2s0 10.10.0.0/24
   364  ssh admin@10.10.0.12
   365  clear
-  366  ssh emacs@LemonCorp
   367  clear
   368  ls
   369  mkdir mr_rep
   370  git init
   371  touch tmp.txt
   372  nano tmp.txt
-  373  sudo arp-scan --interface=wlp2s0 10.10.0.0/24
   374  cp tmp.txt tmp2.txt
   375  ls
   376  rm tmp2.txt
@@ -529,15 +209,10 @@ happis@happis-Vivobook:~/Рабочий стол/MAI$ history    1  cls
   378  ls -a
   379  ip addr
   380  clear
-  381  sudo arp-scan --interface=wlp2s0 10.10.72.0/24
-  382  ssh LemonCorp@10.10.72.240
   383  clear
   384  ssh nvgavrilov@
   385  clear
   386  ip addr
-  387  $ sudo arp-scan --interface=wlp2s0 192.168.0.0/24
-  388  sudo arp-scan --interface=wlp2s0 192.168.72.0/24
-  389  sudo arp-scan --interface=wlp2s0 192.168.43.0/24
   390  clear
   391  ls
   392  cd my_rep
