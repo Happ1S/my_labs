@@ -18,7 +18,7 @@
   ![Image alt](https://github.com/Happ1S/my_labs/blob/main/lab6/zeros.png)
   ![Image alt](https://github.com/Happ1S/my_labs/blob/main/lab6/plus.png)
   ![Image alt](https://github.com/Happ1S/my_labs/blob/main/lab6/left.png)
-  ![Image alt](https://github.com/Happ1S/my_labs/blob/main/lab6/right.png)
+  ![Image alt](https://github.com/Happ1S/my_labs/blob/main/lab6/diagramma.png)
 
 
 
