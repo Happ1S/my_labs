@@ -18,7 +18,7 @@ happis@happis-Vivobook:~/Рабочий стол/main_branch/MAI/labs$ ./a.out
 Вы попали
 happis@happis-Vivobook:~/Рабочий стол/main_branch/MAI/labs$ 
 ```
-
+### Код программы
 ```
 #include <stdio.h>
 
