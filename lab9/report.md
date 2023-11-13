@@ -71,7 +71,7 @@ int main() {
 
     for (int z; z < 50; ++z) {
         if (((i - 20) * (i - 20)) / (10 * 10) + (j * j) / (5 * 5) <= 1) {
-            puts ("Вы попали");
+            puts ("You're in");
             flag = 1;
             break;
         }
@@ -81,7 +81,7 @@ int main() {
         k += 1;
     }
     if (flag == 0) {
-        puts("Вы промахнулись");
+        puts("You missed");
     }
     return 0;
 }
