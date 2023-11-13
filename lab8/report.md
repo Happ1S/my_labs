@@ -17,6 +17,8 @@
 4. **Сценарий выполнения работы**:
 
 ![Image alt](https://github.com/Happ1S/my_labs/blob/main/lab8/screen1_lab8.png)
+![Image alt](https://github.com/Happ1S/my_labs/blob/main/lab8/screen2_lab8.png.png)
+![Image alt](https://github.com/Happ1S/my_labs/blob/main/lab8/screen3_lab8.png.png)
 ```
 happis@happis-Vivobook:~/Рабочий стол/main_branch/MAI/labs$ cat hello.c
 #include <stdio.h>
