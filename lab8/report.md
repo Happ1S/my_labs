@@ -16,8 +16,11 @@
 
 4. **Сценарий выполнения работы**:
 
+### Emacs + Terminal
 ![Image alt](https://github.com/Happ1S/my_labs/blob/main/lab8/screen1_lab8.png)
+### Nano
 ![Image alt](https://github.com/Happ1S/my_labs/blob/main/lab8/screen2_lab8.png.png)
+### VS Code
 ![Image alt](https://github.com/Happ1S/my_labs/blob/main/lab8/screen3_lab8.png.png)
 ```
 happis@happis-Vivobook:~/Рабочий стол/main_branch/MAI/labs$ cat hello.c
@@ -51,5 +54,4 @@ hello.c:6:3: error: expected declaration or statement at end of input
 ```
 
 5. **Выводы**:
-  В результате работы я научился компилировать и отлаживать простейшие программы на Си, а также работать в редакторе emacs, nano и VS Code.
-
+  В результате работы я научился компилировать и отлаживать простейшие программы на Си, а также работать в редакторе emacs, nano и VS Code. Каждый редактор кода оказался по своему хорош. в Vs Code удобнее работать, за счет интуитивного интерфейса, в нано можно быстро редактировать файлы с минимальным интерфейсом, а в emacs удобно редактировать именно Си и С++.
