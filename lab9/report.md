@@ -12,6 +12,7 @@
 
 4. **Сценарий выполнения работы**:
 
+### Компиляция и запуск
 ```
 happis@happis-Vivobook:~/Рабочий стол/main_branch/MAI/labs$ cc main.c
 happis@happis-Vivobook:~/Рабочий стол/main_branch/MAI/labs$ ./a.out
