@@ -15,7 +15,7 @@
 ### Компиляция и запуск
 ```
 happis@happis-Vivobook:~/Рабочий стол/main_branch/MAI/labs$ cc main.c
-happis@happis-Vivobook:~/Рабочий стол/main_branch/MAI/labs$ ./a.out
+happis@happis-Vivobook:~/Рабочий стол/main_branch/MAI/labs$ ./a
 Вы попали
 happis@happis-Vivobook:~/Рабочий стол/main_branch/MAI/labs$ 
 ```
@@ -88,4 +88,4 @@ int main() {
 ```
 
 5. **Выводы**:
-  В результате работы я научился 
+  В результате работы я научился писать итеративный код на Си, писать элементарные функции, отлаживать программный код, а также узнал про уравнение эллипса и как его видоизменять. 
