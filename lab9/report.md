@@ -14,7 +14,7 @@
 
 ### Компиляция и запуск
 ```
-happis@happis-Vivobook:~/Рабочий стол/main_branch/MAI/labs$ cc main.c
+happis@happis-Vivobook:~/Рабочий стол/main_branch/MAI/labs$ gcc --std=c99 --pedantic -o main main.c
 happis@happis-Vivobook:~/Рабочий стол/main_branch/MAI/labs$ ./a
 Вы попали
 happis@happis-Vivobook:~/Рабочий стол/main_branch/MAI/labs$ 
