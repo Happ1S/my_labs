@@ -30,7 +30,7 @@ int main (void)
 {
   puts ("Hello, World!");
   return 0;
-}happis@happis-Vivobook:~/Рабочий стол/main_branch/MAI/labs$ gcc --std=c99 --pendantic -o main hello.c
+}happis@happis-Vivobook:~/Рабочий стол/main_branch/MAI/labs$ gcc --std=c99 --pedantic -o main hello.c
 happis@happis-Vivobook:~/Рабочий стол/main_branch/MAI/labs$ ./a.out
 Hello, World!
 happis@happis-Vivobook:~/Рабочий стол/main_branch/MAI/labs$ cc hello.c
