@@ -19,7 +19,7 @@
 6. **Сценарий выполнения работы**:
 
 ### PDF
-![Image alt](https://github.com/Happ1S/my_labs/blob/main/lab10/latex.pdf)
+![Image alt](https://github.com/Happ1S/my_labs/blob/main/lab10/latex_page-0001.jpg)
 ```
 happis@happis-Vivobook:~/Рабочий стол/main_branch/MAI/labs$ cat hello.c
 #include <stdio.h>
