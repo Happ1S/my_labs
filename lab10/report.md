@@ -20,8 +20,9 @@
 
 ### PDF
 ![Image alt](https://github.com/Happ1S/my_labs/blob/main/lab10/latex_page-0001.jpg)
-
-[code](https://github.com/Happ1S/my_labs/blob/main/lab10/latex.tex)
+### Ссылки
+[Ссылка на код](https://github.com/Happ1S/my_labs/blob/main/lab10/latex.tex)
+[Ссылка на пдф](https://github.com/Happ1S/my_labs/blob/main/lab10/latex.pdf)
 
 5. **Выводы**:
   В результате работы я научился верстать и компилировать страницы в система LaTeX.
