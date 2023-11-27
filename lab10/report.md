@@ -19,7 +19,10 @@
 6. **Сценарий выполнения работы**:
 
 ### PDF
-![Image alt](https://github.com/Happ1S/my_labs/blob/main/lab10/latex_page-0001.jpg)
+![Image alt](https://github.com/Happ1S/my_labs/blob/main/lab10/pdf_screen.png)
+
+![Image alt](https://github.com/Happ1S/my_labs/blob/main/lab10/screen.png)
+
 ### Ссылки
 [Ссылка на код](https://github.com/Happ1S/my_labs/blob/main/lab10/latex.tex)
 [Ссылка на пдф](https://github.com/Happ1S/my_labs/blob/main/lab10/latex.pdf)
