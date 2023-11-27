@@ -25,6 +25,8 @@
 
 ### Ссылки
 [Ссылка на код](https://github.com/Happ1S/my_labs/blob/main/lab10/latex.tex)
+[Ссылка на дви](https://github.com/Happ1S/my_labs/blob/main/lab10/latex.dvi)
+[Ссылка на пс](https://github.com/Happ1S/my_labs/blob/main/lab10/latex.ps)
 [Ссылка на пдф](https://github.com/Happ1S/my_labs/blob/main/lab10/latex.pdf)
 
 5. **Выводы**:
