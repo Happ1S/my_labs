@@ -17,6 +17,17 @@ fi;
 
 suffix="${1:-.txt}";
 days=${2:-0};
+
+if [[ $suffix == ?(-)+([[:digit:]]) ]]; then
+	echo "Неправильно указано расширение файла"
+	exit 1
+fi;
+
+if [[ $days == *"."* ]]; then
+        echo "Неправильный указано кол-во дней"
+	exit 1
+fi;
+
 mapfile -t files < <(find . -type f -atime $days | xargs ls -ld | grep -oE '[^ /]+$')
 
 for file in "${files[@]}"; do
@@ -26,4 +37,3 @@ for file in "${files[@]}"; do
 		echo $answer;
 	fi;
 done;
-
