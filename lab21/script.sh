@@ -30,7 +30,10 @@ fi;
 
 mapfile -t files < <(find . -type f -atime $days | xargs ls -ld | grep -oE '[^ /]+$' | grep -E "\\$suffix")
 
-for file in "${files[@]}"; do
+# команда mapfile загружает содержимое команд в массив "files".
+# Опция "-t" используется для удаления символа новой строки из каждого элемента массива.
+
+for file in "${files[@]}"; do # file проходится построчно (files[@]) по массиву files
         rm $file;
         #echo $file;
 done;
