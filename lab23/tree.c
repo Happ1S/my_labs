@@ -1,172 +1,172 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
 
-
-// Структура узла дерева
-struct Node {
+// Структура узла обычного дерева
+typedef struct _node {
     int data;
-    struct Node* left;
-    struct Node* right;
-};
+    struct _node* parent;
+    struct _node** children;
+} N_Node;
+
+int input() {
+    int num;
+    printf("Введите число: ");
+    scanf("%d", &num);
+    return num;
+}
 
 // Создание нового узла
-struct Node* createNode(int data) {
-    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+N_Node* createNode(int data) {
+    N_Node* newNode = (N_Node*)malloc(sizeof(N_Node));
     if (newNode == NULL) {
         printf("Ошибка: Не удалось выделить память для нового узла.\n");
         exit(-1);
     }
     newNode->data = data;
-    newNode->left = NULL;
-    newNode->right = NULL;
+    newNode->parent = NULL;
+    newNode->children = NULL;
     return newNode;
 }
 
-// Функция добавления узла в дерево
-struct Node* insertNode(struct Node* root, int data) {
-    if (root == NULL) {
-        return createNode(data);
-    }
-
-    if (data < root->data) {
-        root->left = insertNode(root->left, data);
-    } else if (data > root->data) {
-        root->right = insertNode(root->right, data);
-    }
-
-    return root;
-}
-
-// Функция поиска минимального элемента в дереве
-struct Node* minValueNode(struct Node* node) {
-    struct Node* current = node;
-
-    while (current && current->left != NULL) {
-        current = current->left;
-    }
-
-    return current;
-}
-
-void traverse(struct Node* root, int depth, int points[][2], int index) {
-        if (root->left == NULL && root->right == NULL) {
-            points[index][0] = depth;
-            points[index][1] = root->data;
-            index++;
-        }
-        if (root->left!= NULL) {
-            traverse(root->left, depth+1, points, index);
-        }
-        if (root->right!= NULL) {
-            traverse(root->right, depth+1, points, index);
-        }
-    return points;
-    }
-
-int findMinDepthLeaf(struct Node* root) {
-    int points[100][2];
-    if (root == NULL) {
-        printf("Дерево пустое.\n");
-        return 1000; // Возвращаем максимальное значение, чтобы не учитывать этот узел
-    }
-
-    int minDepth = 1000; // Переменная для хранения минимальной глубины
-    int minDepthValue = root->data; // Переменная для хранения значения листа с минимальной глубиной
-    // Рекурсивная функция для обхода дерева
-    traverse(root, 1, points, 0);
-}
-
-// Функция удаления узла из дерева
-struct Node* deleteNode(struct Node* root, int data) {
-    if (root == NULL) {
-        return root;
-    }
-
-    if (data < root->data) {
-        root->left = deleteNode(root->left, data);
-    } else if (data > root->data) {
-        root->right = deleteNode(root->right, data);
+// Функция для добавления дочернего узла
+void addChild(N_Node* parent, N_Node* child) {
+    if (parent->children == NULL) {
+        parent->children = (N_Node**)malloc(sizeof(N_Node*));
+        parent->children[0] = child;
     } else {
-        // Узел с одним или без детей
-        if (root->left == NULL) {
-            struct Node* temp = root->right;
-            free(root);
-            return temp;
-        } else if (root->right == NULL) {
-            struct Node* temp = root->left;
-            free(root);
-            return temp;
+        int numChildren = 0;
+        while (parent->children[numChildren] != NULL) {
+            numChildren++;
         }
-
-        // Узел с двумя детьми: получаем наименьший элемент правого поддерева
-        struct Node* temp = minValueNode(root->right);
-
-        // Копируем данные наименьшего узла в текущий узел
-        root->data = temp->data;
-
-        // Удаляем наименьший узел из правого поддерева
-        root->right = deleteNode(root->right, temp->data);
+        parent->children = (N_Node**)realloc(parent->children, (numChildren + 1) * sizeof(N_Node*));
+        parent->children[numChildren] = child;
     }
-
-    return root;
+    child->parent = parent;
 }
 
-// Функция распечатки дерева в прямом порядке (pre-order traversal)
-void printPreOrder(struct Node* root) {
-    if (root != NULL) {
-        printf("%d ", root->data);
-        printPreOrder(root->left);
-        printPreOrder(root->right);
+int findMinDepthLeafValue(N_Node* root, int depth, int* minDepth) {
+    // Если узел пустой, возвращаем максимальное значение
+    if (root == NULL)
+        return INT_MAX;
+
+    // Если узел является листом, и его глубина меньше минимальной, обновляем минимальную глубину
+    if (root->children == NULL) {
+        if (depth < *minDepth)
+            *minDepth = depth;
+        return root->data;
+    }
+
+    int minLeafValue = INT_MAX;
+
+    // Рекурсивно ищем значения листьев с наименьшей глубиной в каждом из дочерних узлов
+    for (int i = 0; root->children[i] != NULL; i++) {
+        int leafValue = findMinDepthLeafValue(root->children[i], depth + 1, minDepth);
+        if (leafValue != INT_MAX && leafValue < minLeafValue)
+            minLeafValue = leafValue;
+    }
+
+    // Возвращаем значение листа с наименьшей глубиной
+    return minLeafValue;
+}
+
+
+// Функция для вывода структуры дерева в красивом виде
+void printTree(N_Node* root, int depth) {
+    if (root == NULL)
+        return;
+
+    for (int i = 0; i < depth; i++)
+        printf("   ");
+    printf("%d\n", root->data);
+
+    if (root->children != NULL) {
+        for (int i = 0; root->children[i] != NULL; i++) {
+            printTree(root->children[i], depth + 1);
+        }
     }
 }
+
+int MaxDepth(N_Node* root) {
+    // Если узел пустой, возвращаем 0
+    if (root == NULL)
+        return 0;
+
+    int maxChildDepth = 0;
+
+    // Рекурсивно ищем максимальную глубину в каждом из дочерних узлов
+    if (root->children != NULL) {
+        for (int i = 0; root->children[i] != NULL; i++) {
+            int childDepth = MaxDepth(root->children[i]);
+            if (childDepth > maxChildDepth)
+                maxChildDepth = childDepth;
+        }
+    }
+
+    // Максимальная глубина текущего узла - это максимальная глубина его дочерних узлов + 1
+    return maxChildDepth + 1;
+}
+
 
 int main() {
-    struct Node* root = NULL;
-    int choice, data;
+    // Создание узлов дерева
+    N_Node* root = createNode(1);
+    N_Node* node2 = createNode(2);
+    N_Node* node3 = createNode(3);
+    N_Node* node4 = createNode(4);
+    N_Node* node5 = createNode(5);
+    N_Node* node6 = createNode(6);
+    N_Node* node7 = createNode(7);
+    N_Node* node8 = createNode(8);
+    N_Node* node9 = createNode(9);
+    N_Node* node10 = createNode(10);
 
+    // Установка связей между узлами
+    addChild(root, node2);
+    addChild(root, node3);
+    addChild(node2, node4);
+    addChild(node4, node8);
+    addChild(node2, node5);
+    addChild(node5, node9);
+    addChild(node3, node6);
+    addChild(node6, node10);
+    addChild(node3, node7);
+
+    int minDepth = INT_MAX;
+    int choice, data;
+    int maxDepth = MaxDepth(root);
+
+    while (1) {
     printf("1. Добавить узел\n");
     printf("2. Распечатать дерево\n");
     printf("3. Удалить узел\n");
     printf("4. Лист минимальной глубины\n");
     printf("0. Завершить программу\n");
-
-    while (1) {
-        printf("\nВыберите действие: ");
+    printf("\nВыберите действие: ");
         scanf("%d", &choice);
-        root = insertNode(root, 5);
-        root = insertNode(root, 3);
-        root = insertNode(root, 10);
-        root = insertNode(root, 8);
-        root = insertNode(root, 12);
-        root = insertNode(root, 15);
         switch (choice) {
             case 0:
                 printf("Программа завершена.\n");
                 exit(0);
             case 1:
-                printf("Введите значение для нового узла: ");
-                scanf("%d", &data);
-                root = insertNode(root, data);
+                int newNodeValue = input();
+                N_Node* newNode = createNode(newNodeValue);
                 break;
             case 2:
-                printf("Дерево в прямом порядке: ");
-                printPreOrder(root);
+                printf("Дерево в прямом порядке: \n");
+                printTree(root, 5);
                 printf("\n");
                 break;
             case 3:
-                printf("Введите значение узла для удаления: ");
-                scanf("%d", &data);
-                root = deleteNode(root, data);
                 printf("Узел удален.\n");
                 break;
             case 4:
-                printf("%d", findMinDepthLeaf(root));
+                printf("%d\n", findMinDepthLeafValue(root, 5, &minDepth));
                 break;
             default:
                 printf("Некорректный ввод. Попробуйте еще раз.\n");
                 break;
         }
     }
-
     return 0;
 }
