@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <limits.h>
 
-// Структура узла обычного дерева
 typedef struct _node {
     int data;
     struct _node* parent;
@@ -15,7 +14,6 @@ int input() {
     return num;
 }
 
-// Создание нового узла
 N_Node* createNode(int data) {
     N_Node* newNode = (N_Node*)malloc(sizeof(N_Node));
     if (newNode == NULL) {
@@ -28,7 +26,6 @@ N_Node* createNode(int data) {
     return newNode;
 }
 
-// Функция для добавления дочернего узла
 void addChild(N_Node* parent, N_Node* child) {
     if (parent->children == NULL) {
         parent->children = (N_Node**)malloc(sizeof(N_Node*));
@@ -65,12 +62,9 @@ int findMinDepthLeafValue(N_Node* root, int depth, int* minDepth) {
             minLeafValue = leafValue;
     }
 
-    // Возвращаем значение листа с наименьшей глубиной
     return minLeafValue;
 }
 
-
-// Функция для вывода структуры дерева в красивом виде
 void printTree(N_Node* root, int depth) {
     if (root == NULL)
         return;
@@ -87,7 +81,6 @@ void printTree(N_Node* root, int depth) {
 }
 
 int MaxDepth(N_Node* root) {
-    // Если узел пустой, возвращаем 0
     if (root == NULL)
         return 0;
 
@@ -102,7 +95,6 @@ int MaxDepth(N_Node* root) {
         }
     }
 
-    // Максимальная глубина текущего узла - это максимальная глубина его дочерних узлов + 1
     return maxChildDepth + 1;
 }
 
@@ -125,9 +117,36 @@ N_Node* findNodeByValue(N_Node* root, int value) {
     return result;
 }
 
+void deleteNode(N_Node* root, int value) {
+    if (root == NULL)
+        return;
+
+    // Находим узел с заданным значением
+    N_Node* nodeToDelete = findNodeByValue(root, value);
+    if (nodeToDelete == NULL) {
+        printf("Узел с указанным значением не найден.\n");
+        return;
+    }
+
+    // Удаляем найденный узел
+    if (nodeToDelete->parent != NULL) {
+        N_Node* parent = nodeToDelete->parent;
+        int i = 0;
+        while (parent->children[i] != nodeToDelete) {
+            i++;
+        }
+        for (; parent->children[i] != NULL; i++) {
+            parent->children[i] = parent->children[i + 1];
+        }
+        free(nodeToDelete);
+    } else {
+        free(nodeToDelete);
+    }
+
+    printf("Узел со значением %d удален из дерева.\n", value);
+}
 
 int main() {
-    // Создание узлов дерева
     N_Node* root = createNode(1);
     N_Node* node2 = createNode(2);
     N_Node* node3 = createNode(3);
@@ -139,7 +158,6 @@ int main() {
     N_Node* node9 = createNode(9);
     N_Node* node10 = createNode(10);
 
-    // Установка связей между узлами
     addChild(root, node2);
     addChild(root, node3);
     addChild(node2, node4);
@@ -181,7 +199,8 @@ int main() {
                 printf("\n");
                 break;
             case 3:
-                printf("Узел удален.\n");
+                printf("Введите узел для удаления: ");
+                deleteNode(root, input());
                 break;
             case 4:
                 printf("%d\n", findMinDepthLeafValue(root, 5, &minDepth));
