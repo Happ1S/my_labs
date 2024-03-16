@@ -11,7 +11,6 @@ typedef struct _node {
 
 int input() {
     int num;
-    printf("Введите число: ");
     scanf("%d", &num);
     return num;
 }
@@ -107,6 +106,25 @@ int MaxDepth(N_Node* root) {
     return maxChildDepth + 1;
 }
 
+N_Node* findNodeByValue(N_Node* root, int value) {
+    if (root == NULL)
+        return NULL;
+
+    if (root->data == value)
+        return root;
+
+    N_Node* result = NULL;
+    if (root->children != NULL) {
+        for (int i = 0; root->children[i] != NULL; i++) {
+            result = findNodeByValue(root->children[i], value);
+            if (result != NULL)
+                break;
+        }
+    }
+
+    return result;
+}
+
 
 int main() {
     // Создание узлов дерева
@@ -137,23 +155,28 @@ int main() {
     int maxDepth = MaxDepth(root);
 
     while (1) {
-    printf("1. Добавить узел\n");
-    printf("2. Распечатать дерево\n");
-    printf("3. Удалить узел\n");
-    printf("4. Лист минимальной глубины\n");
-    printf("0. Завершить программу\n");
-    printf("\nВыберите действие: ");
+        printf("\n1. Добавить узел\n");
+        printf("2. Распечатать дерево\n");
+        printf("3. Удалить узел\n");
+        printf("4. Лист минимальной глубины\n");
+        printf("0. Завершить программу\n");
+        printf("\nВыберите действие: ");
         scanf("%d", &choice);
+        printf("\n");
         switch (choice) {
             case 0:
                 printf("Программа завершена.\n");
                 exit(0);
             case 1:
+                printf("Введите узел: ");
                 int newNodeValue = input();
                 N_Node* newNode = createNode(newNodeValue);
+                printf("Введите родительский узел: ");
+                int searchValue = input();
+                addChild(findNodeByValue(root, searchValue), newNode);
                 break;
             case 2:
-                printf("Дерево в прямом порядке: \n");
+                printf("Дерево в прямом порядке: \n\n");
                 printTree(root, 5);
                 printf("\n");
                 break;
