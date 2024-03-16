@@ -3,18 +3,18 @@
 #include <limits.h>
 
 typedef struct _node {
-    int data;
+    double data;
     struct _node* parent;
     struct _node** children;
 } N_Node;
 
-int input() {
-    int num;
-    scanf("%d", &num);
+double input() {
+    double num;
+    scanf("%lf", &num);
     return num;
 }
 
-N_Node* createNode(int data) {
+N_Node* createNode(double data) {
     N_Node* newNode = (N_Node*)malloc(sizeof(N_Node));
     if (newNode == NULL) {
         printf("Ошибка: Не удалось выделить память для нового узла.\n");
@@ -41,7 +41,7 @@ void addChild(N_Node* parent, N_Node* child) {
     child->parent = parent;
 }
 
-int findMinDepthLeafValue(N_Node* root, int depth, int* minDepth) {
+double findMinDepthLeafValue(N_Node* root, int depth, int* minDepth) {
     // Если узел пустой, возвращаем максимальное значение
     if (root == NULL)
         return INT_MAX;
@@ -71,7 +71,7 @@ void printTree(N_Node* root, int depth) {
 
     for (int i = 0; i < depth; i++)
         printf("   ");
-    printf("%d\n", root->data);
+    printf("%lf\n", root->data);
 
     if (root->children != NULL) {
         for (int i = 0; root->children[i] != NULL; i++) {
@@ -98,7 +98,7 @@ int MaxDepth(N_Node* root) {
     return maxChildDepth + 1;
 }
 
-N_Node* findNodeByValue(N_Node* root, int value) {
+N_Node* findNodeByValue(N_Node* root, double value) {
     if (root == NULL)
         return NULL;
 
@@ -117,7 +117,7 @@ N_Node* findNodeByValue(N_Node* root, int value) {
     return result;
 }
 
-void deleteNode(N_Node* root, int value) {
+void deleteNode(N_Node* root, double value) {
     if (root == NULL)
         return;
 
@@ -143,7 +143,7 @@ void deleteNode(N_Node* root, int value) {
         free(nodeToDelete);
     }
 
-    printf("Узел со значением %d удален из дерева.\n", value);
+    printf("Узел со значением %lf удален из дерева.\n", value);
 }
 
 int main() {
@@ -169,7 +169,7 @@ int main() {
     addChild(node3, node7);
 
     int minDepth = INT_MAX;
-    int choice, data;
+    int choice;
     int maxDepth = MaxDepth(root);
 
     while (1) {
@@ -187,10 +187,10 @@ int main() {
                 exit(0);
             case 1:
                 printf("Введите узел: ");
-                int newNodeValue = input();
+                double newNodeValue = input();
                 N_Node* newNode = createNode(newNodeValue);
                 printf("Введите родительский узел: ");
-                int searchValue = input();
+                double searchValue = input();
                 addChild(findNodeByValue(root, searchValue), newNode);
                 break;
             case 2:
@@ -203,7 +203,7 @@ int main() {
                 deleteNode(root, input());
                 break;
             case 4:
-                printf("%d\n", findMinDepthLeafValue(root, 5, &minDepth));
+                printf("%lf\n", findMinDepthLeafValue(root, 5, &minDepth));
                 break;
             default:
                 printf("Некорректный ввод. Попробуйте еще раз.\n");
