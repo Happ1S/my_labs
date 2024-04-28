@@ -3,13 +3,25 @@
 #include <ncurses.h>
 #include <stdio.h>
 
-List *list_create()
-{
-    List *list = (List*) malloc(sizeof(List));
-    
-    list->head = (ListNode*) malloc(sizeof(ListNode));
-    list->head->next = NULL;
+List *list_create() {
+    // Allocate memory for the List structure
+    List *list = (List *)malloc(sizeof(List));
+    if (list == NULL) {
+        perror("Error: Could not allocate memory for List");
+        return NULL;
+    }
 
+    // Allocate memory for the head node
+    list->head = (ListNode *)malloc(sizeof(ListNode));
+    if (list->head == NULL) {
+        perror("Error: Could not allocate memory for ListNode");
+        free(list); // Free the allocated list before returning
+        return NULL;
+    }
+
+    // Initialize the head node
+    list->head->next = NULL;
+    list->head->data = 0; // Explicitly initialize the data field of the head node, if applicable
     return list;
 }
 
@@ -22,21 +34,12 @@ void list_insert(ListNode *after_node, Item value)
 }
 
 void list_delete(ListNode *after_node) {
-    // Check if after_node and after_node->next are not null
     if (after_node != NULL && after_node->next != NULL) {
-        // Node to be deleted
         ListNode *node_to_delete = after_node->next;
-        
-        // Update the pointers to bypass the node to be deleted
         after_node->next = node_to_delete->next;
-        
-        // Free the memory of the node to be deleted
         free(node_to_delete);
-        
-        // Refresh the screen to display the print statement
         refresh();
     } else {
-        // Print an error message if after_node or after_node->next is null
         printw("Error: Unable to delete node. Invalid after_node or after_node->next.\n");
         refresh();
     }
@@ -49,33 +52,37 @@ bool list_is_empty(List *list)
 
 void list_destroy(List *list)
 {
-    ListNode *n = list->head->next;
-    while (list->head != NULL)
+    ListNode *current = list->head;
+    ListNode *next;
+
+    while (current != NULL)
     {
-        n = list->head->next;
-        free(list->head);
-        list->head = n;
+        next = current->next;
+        free(current);
+        current = next;
     }
-    list->head = NULL;
+
+    free(list);
 }
+
 
 void list_print(List *list) {
     if (list != NULL && list->head != NULL) {
-        ListNode *current = list->head->next;  // Начинаем с первого узла (после head)
+        ListNode *current = list->head->next;  
     while (current != NULL) {
-        printw("%d ", current->data);  // Выводим данные текущего узла
-        current = current->next;  // Переходим к следующему узлу
+        printw("%d ", current->data);  
+        current = current->next; 
     }
-    printw  ("\n");  // Конец списка
+    printw  ("\n");
     refresh();
     }
 }
 
-void bubble_sort(List *list) {
+void bubble_sort(List *list) { 
     if (list_is_empty(list)) {
         return;
     }
-
+    
     bool swapped;
     ListNode *current;
     ListNode *end = NULL;
