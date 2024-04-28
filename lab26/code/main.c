@@ -51,21 +51,6 @@ void display_options(int selected) {
     refresh();  // Refresh the screen
 }
 
-void list_read_from_file(const char *filename, List *list) {
-    FILE *file = fopen(filename, "r");
-    if (file == NULL) {
-        perror("Ошибка открытия файла");
-        return;
-    }
-
-    Item value;
-    while (fscanf(file, "%d", &value) != EOF) {
-        list_insert(list->head, value);
-    }
-
-    fclose(file);
-}
-
 int main(int argc, char *argv[])
 {
     List *list = list_create();
@@ -105,7 +90,6 @@ int main(int argc, char *argv[])
                 scanw("%d", &value);
                 list_insert(list->head, value);
                 noecho();
-                refresh();
                 display_options(selected);
             } else if (selected == 1) {
                 list_delete(list->head);
@@ -123,11 +107,9 @@ int main(int argc, char *argv[])
                 bubble_sort(list);
             } else {
                 endwin();
+                list_destroy(list);
                 exit(EXIT_SUCCESS);
             }
         }
     }
-    
-    endwin();
-    return 0;
 }
